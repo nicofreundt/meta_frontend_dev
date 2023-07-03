@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: center;
+}
+
+#headerContent {
+    display: flex;
+    flex-direction: row;
+    width: var(--content-width);
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1rem;
+}
+
+#top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding-top: .25rem;
+}
+
+#top-nav > li:nth-child(n):not(:last-child) {
+    padding-right: 1rem;
+    border-right: 1px solid black;
+}
+
+#top-nav > li > a {
+    color: var(--highlight-color-b);
+    text-transform: uppercase;
+}

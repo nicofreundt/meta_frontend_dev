@@ -1,0 +1,93 @@
+:root {
+    --primary-color-a: #495E57;
+    --primary-color-b: #F4CE14;
+    --secondary-color-a: #EE9972;
+    --secondary-color-b: #FBDABB;
+    --highlight-color-a: #EDEFEE;
+    --highlight-color-b: #333333;
+
+    --content-width: 60%
+}
+
+@media (width < 1024px) {
+    :root {
+        --content-width: 90%;
+    }
+}
+
+@media (1024px < width < 1320px) {
+    :root {
+        --content-width: 80%;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.ls-none {
+    list-style: none;
+    padding: 0;
+}
+
+.td-none {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Markazi Text', serif;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 64pt;
+    margin: 0;
+    white-space: nowrap;
+}
+
+h2 {
+    font-size: 40pt;
+}
+
+h3 {
+    font-size: 20pt;
+    font-weight: bolder;
+    margin: 0;
+}
+
+a {
+    font-size: 16pt;
+    white-space: nowrap;
+}
+
+p {
+    font-size: 16pt;
+    line-height: 1.5;
+}
+
+* {
+    font-family: "Karla";
+}
+
+button {
+    all: unset;
+    background-color: var(--highlight-color-b);
+    color: var(--highlight-color-a);
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+button:hover {
+    background-color: var(--highlight-color-a);
+    color: var(--highlight-color-b);
+    outline: 1px solid var(--highlight-color-b);
+}
+
+button:active {
+    background-color: var(--secondary-color-a);
+    color: var(--highlight-color-b);
+}
