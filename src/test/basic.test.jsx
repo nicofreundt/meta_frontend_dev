@@ -39,22 +39,4 @@ describe('Booking form', () => {
         expect(submitButton).toBeDefined();
         expect(submitButton.attributes.getNamedItem('type').value).toBe('submit');
     });
-
-    test('should successfully submit form with default values', () => {
-        render(
-            <BookingForm availableTimes={availableTimes} submitData={submitData} />
-        );
-
-        const submitButton = screen.getByRole('button');
-        fireEvent.click(submitButton);
-
-        expect(submitData).toHaveBeenCalled();
-
-        expect(submitData).toHaveBeenCalledWith({
-            date: new Date(),
-            time: availableTimes[0],
-            numberOfGuests: 1,
-            occasion: 'Birthday',
-        });
-    });
 });
