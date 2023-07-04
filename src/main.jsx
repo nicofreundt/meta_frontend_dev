@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import Home from './components/Home/Home.jsx'
 import "./style.css"
+import ErrorPage from './components/ErrorPage'
+import Booking from './components/Booking'
+import BookingConfirmation from './components/Booking/BookingConfirmation.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,8 +16,25 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Home />
       },
+      {
+        path: "reservations",
+        children: [
+          {
+            index: true,
+            element: <Booking />
+          },
+          {
+            path: "success",
+            element: <BookingConfirmation />
+          }
+        ]
+      },
+      {
+        path: "*",
+        element: <ErrorPage />
+      }
     ]
   },
 ])

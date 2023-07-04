@@ -1,0 +1,53 @@
+#bookingSection {
+    margin-bottom: 5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#bookingSection h1 {
+    white-space: unset;
+}
+
+#bookingSection > *:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select, input {
+    all: unset;
+    line-height: 2;
+    border-radius: 1rem;
+    background-color: var(--highlight-color-a);
+    padding-inline: 1rem;
+}
+
+input[type="submit"] {
+    background-color: var(--highlight-color-b);
+    color: var(--highlight-color-a);
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="submit"]:hover {
+    color: var(--highlight-color-b);
+    background-color: var(--highlight-color-a);
+    outline: 1px solid black;
+}
+
+input[type="submit"]:active {
+    color: var(--highlight-color-a);
+    background-color: var(--secondary-color-a);
+}
+
+#bookingConf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+    gap: 5rem;
+}

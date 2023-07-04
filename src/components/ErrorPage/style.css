@@ -1,0 +1,6 @@
+#error {
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
